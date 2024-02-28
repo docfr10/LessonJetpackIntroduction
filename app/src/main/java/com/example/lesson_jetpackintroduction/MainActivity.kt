@@ -3,13 +3,11 @@ package com.example.lesson_jetpackintroduction
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.navigation
+import androidx.navigation.compose.rememberNavController
 import com.example.lesson_jetpackintroduction.ui.theme.LessonJetpackIntroductionTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,30 +15,34 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             LessonJetpackIntroductionTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
+                // AppNavHost()
+                ScaffoldFun()
             }
         }
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+fun AppNavHost() {
+    val navController = rememberNavController()
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    LessonJetpackIntroductionTheme {
-        Greeting("Android")
+    NavHost(
+        navController = navController,
+        startDestination = "Graph_1"
+    ) {
+        navigation(startDestination = "Screen_2", route = "Graph_1") {
+            composable(route = "Screen_1") {
+                Screen1(navController = navController)
+            }
+            composable(route = "Screen_2") {
+                Screen2(navController = navController)
+            }
+        }
+
+        navigation(startDestination = "Screen_3", route = "Graph_2") {
+            composable(route = "Screen_3") {
+                Screen3(navController = navController)
+            }
+        }
     }
 }
