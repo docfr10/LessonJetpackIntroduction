@@ -16,7 +16,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             LessonJetpackIntroductionTheme {
                 // AppNavHost()
-                ScaffoldFun()
+                // ScaffoldFun()
+                // LazyRowFun()
+                // LazyColumnFun()
             }
         }
     }
