@@ -11,6 +11,8 @@ import androidx.navigation.compose.rememberNavController
 import com.example.lesson_jetpackintroduction.navigation.Screen1
 import com.example.lesson_jetpackintroduction.navigation.Screen2
 import com.example.lesson_jetpackintroduction.navigation.Screen3
+import com.example.lesson_jetpackintroduction.simple.Components
+import com.example.lesson_jetpackintroduction.simple.Containers
 import com.example.lesson_jetpackintroduction.ui.theme.LessonJetpackIntroductionTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +24,8 @@ class MainActivity : ComponentActivity() {
                 // ScaffoldFun()
                 // LazyRowFun()
                 // LazyColumnFun()
-
+                // Components()
+                // Containers()
             }
         }
     }
