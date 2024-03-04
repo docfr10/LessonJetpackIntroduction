@@ -1,4 +1,4 @@
-package com.example.lesson_jetpackintroduction
+package com.example.lesson_jetpackintroduction.navigation
 
 import android.widget.Toast
 import androidx.activity.compose.BackHandler

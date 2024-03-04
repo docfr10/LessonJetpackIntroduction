@@ -1,4 +1,4 @@
-package com.example.lesson_jetpackintroduction
+package com.example.lesson_jetpackintroduction.lazyscreen
 
 import android.util.Log
 import androidx.compose.foundation.clickable

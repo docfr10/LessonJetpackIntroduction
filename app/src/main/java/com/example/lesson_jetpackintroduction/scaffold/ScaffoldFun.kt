@@ -1,4 +1,4 @@
-package com.example.lesson_jetpackintroduction
+package com.example.lesson_jetpackintroduction.scaffold
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
